@@ -28,6 +28,8 @@ module.exports = {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  basePath: "/Prortfolio-V1",
+  assetPrefix: "/Prortfolio-V1/",
 };
 
 module.exports = nextConfig;
