@@ -30,6 +30,9 @@ const nextConfig = {
   output: "export",
   basePath: "/Prortfolio-V1",
   assetPrefix: "/Prortfolio-V1/",
+  images: {
+    unoptimized: true, // Вимкнути оптимізацію зображень
+  },
 };
 
 module.exports = nextConfig;
