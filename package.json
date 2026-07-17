@@ -8,16 +8,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && next export && gh-pages -d out",
-    "export": "next export"
+    "deploy": "next build && touch out/.nojekyll && gh-pages -d out",
+    "export": "next build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.1",
-    "@next/third-parties": "15.1.1",
-    "axios": "^1.6.8",
+    "@next/third-parties": "15.5.16",
+    "axios": "^1.16.0",
     "lottie-react": "^2.4.1",
-    "next": "^15.1.6",
-    "nodemailer": "^6.9.15",
+    "next": "^15.5.16",
+    "nodemailer": "^9.0.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-fast-marquee": "^1.6.2",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "autoprefixer": "latest",
     "eslint": "latest",
-    "eslint-config-next": "15.1.1",
+    "eslint-config-next": "15.5.16",
     "gh-pages": "^6.3.0",
     "postcss": "latest",
     "sass": "^1.69.5",

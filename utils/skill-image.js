@@ -251,6 +251,10 @@ export const skillsImage = (skill) => {
       return sqlalchemy;
     case 'fastapi':
       return fastapi;
+    case 'node js':
+      return javascript; // Using JavaScript icon for Node.js
+    case 'ubuntu':
+      return linux; // Using Linux icon for Ubuntu
     default:
       break;
   }

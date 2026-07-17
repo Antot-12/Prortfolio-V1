@@ -9,11 +9,12 @@ function HeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
       <Image
-        src="./hero.svg"
+        src="/Prortfolio-V1/hero.svg"
         alt="Hero"
         width={1572}
         height={795}
         className="absolute -top-[98px] -z-10"
+        priority
       />
 
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">

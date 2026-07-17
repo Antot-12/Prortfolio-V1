@@ -1,10 +1,15 @@
 const path = require('path')
- 
-module.exports = {
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
+  basePath: "/Prortfolio-V1",
+  assetPrefix: "/Prortfolio-V1/",
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -22,16 +27,6 @@ module.exports = {
         pathname: '**',
       },
     ],
-  },
-}
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  basePath: "/Prortfolio-V1",
-  assetPrefix: "/Prortfolio-V1/",
-  images: {
-    unoptimized: true, // Вимкнути оптимізацію зображень
   },
 };
 
