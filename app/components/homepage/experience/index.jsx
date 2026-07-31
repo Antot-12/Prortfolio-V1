@@ -4,12 +4,10 @@ import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '../../../assets/lottie/code.json';
-import dynamic from 'next/dynamic';
+import { lazy, Suspense } from 'react';
 import GlowCard from "../../helper/glow-card";
 
-const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), {
-  ssr: false,
-});
+const AnimationLottie = lazy(() => import("../../helper/animation-lottie"));
 
 function Experience() {
   return (
@@ -36,7 +34,9 @@ function Experience() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
             <div className="w-full h-full">
-              <AnimationLottie animationPath={experience} />
+              <Suspense fallback={<div className="w-full h-64 flex items-center justify-center"><span className="text-gray-400">Loading...</span></div>}>
+                <AnimationLottie animationPath={experience} />
+              </Suspense>
             </div>
           </div>
 
